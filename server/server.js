@@ -10,6 +10,20 @@ const {getHTML} = require('./controller')
 
 app.get('/', getHTML)
 
+const {
+    getMonsters,
+    deleteMonster, 
+    createMonster, 
+    updateMonster,
+    getCompliment,
+    getFortune
+} = require('./controller')
+
+app.get(`/api/monsters`, getMonsters)
+app.delete(`/api/monsters/:id`, deleteMonster)
+app.post(`/api/monsters`, createMonster)
+app.put(`/api/monsters/:id`, updateMonster)
+
 const port = process.env.PORT || 4004 
 
 app.listen(port, console.log(`Server running on ${port}`))
