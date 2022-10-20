@@ -16,6 +16,14 @@ header {
   color: rgb(251, 251, 251);
 }
 
+h3 {
+  height: 60px; 
+  display: flex; 
+  justify-content: left; 
+  align-items: left;
+  color: rgb(251, 251, 251);
+}
+
 main {
   justify-content: center; 
   align-items: center; 
