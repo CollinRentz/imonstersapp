@@ -31,6 +31,10 @@ var rollbar = new Rollbar({
 
 // record a generic message and send it to Rollbar
 rollbar.log('Hello world!')
+try {
+    nonExistentFunction();
+  } catch (error) {
+    console.error(error);
 
 const port = process.env.PORT || 4004 
 
