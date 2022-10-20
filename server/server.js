@@ -10,6 +10,16 @@ const {getHTML} = require('./controller')
 
 app.get('/', getHTML)
 
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: 'b4b5abec98654e90a1b67477eafd3957',
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
+
+// record a generic message and send it to Rollbar
+rollbar.log('Hello world!')
+
 const {
     getMonsters,
     deleteMonster, 
