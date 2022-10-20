@@ -18,6 +18,8 @@ header {
 
 h3 {
   height: 60px; 
+  width: 350px;
+  font-style: normal;
   display: flex; 
   justify-content: left; 
   align-items: left;
