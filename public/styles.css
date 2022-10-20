@@ -18,8 +18,7 @@ header {
 
 main {
   justify-content: center; 
-  align-items: center;
-  display: flex; 
+  align-items: center; 
   justify-content: center;
 }
 
@@ -27,7 +26,6 @@ form {
   width: 350px;
   height: 350px;
   background-color: rgb(64, 75, 152);
-  position: relative;
   display: flex; 
   flex-direction: column;
   justify-content: space-evenly; 
