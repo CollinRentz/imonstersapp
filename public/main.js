@@ -1,7 +1,7 @@
 const monstersContainer = document.querySelector('#monsters-container')
 const form = document.querySelector('form')
 
-const baseURL = ("http://localhost:4004/api/monsters")
+const baseURL = ("/api/monsters")
 
 const monstersCallback = ({ data: monsters }) => displayMonsters(monsters)
 const errCallback = err => console.log(err)

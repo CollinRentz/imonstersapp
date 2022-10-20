@@ -14,9 +14,7 @@ const {
     getMonsters,
     deleteMonster, 
     createMonster, 
-    updateMonster,
-    getCompliment,
-    getFortune
+    updateMonster
 } = require('./controller')
 
 app.get(`/api/monsters`, getMonsters)
@@ -24,7 +22,15 @@ app.delete(`/api/monsters/:id`, deleteMonster)
 app.post(`/api/monsters`, createMonster)
 app.put(`/api/monsters/:id`, updateMonster)
 
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: 'b4b5abec98654e90a1b67477eafd3957',
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
 
+// record a generic message and send it to Rollbar
+rollbar.log('Hello world!')
 
 const port = process.env.PORT || 4004 
 
