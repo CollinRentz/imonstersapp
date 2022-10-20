@@ -41,5 +41,12 @@ module.exports = {
         } else {
             res.sendStatus(400)
         }
+    },
+    getRollbar: (req,res) => {
+        try {
+            nonExistentFunction();
+          } catch {
+            rollbar.error('This didnt work');
+    }
     }
 }

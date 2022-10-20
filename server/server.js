@@ -14,13 +14,16 @@ const {
     getMonsters,
     deleteMonster, 
     createMonster, 
-    updateMonster
+    updateMonster,
+    getRollbar
 } = require('./controller')
 
 app.get(`/api/monsters`, getMonsters)
 app.delete(`/api/monsters/:id`, deleteMonster)
 app.post(`/api/monsters`, createMonster)
 app.put(`/api/monsters/:id`, updateMonster)
+
+app.get('/rollbar', getRollbar)
 
 var Rollbar = require('rollbar')
 var rollbar = new Rollbar({
@@ -31,10 +34,6 @@ var rollbar = new Rollbar({
 
 // record a generic message and send it to Rollbar
 rollbar.log('Hello world!')
-try {
-    nonExistentFunction();
-  } catch (error) {
-    console.error(error);
 
 const port = process.env.PORT || 4004 
 
