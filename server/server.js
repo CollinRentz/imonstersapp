@@ -32,7 +32,6 @@ var rollbar = new Rollbar({
   captureUnhandledRejections: true,
 })
 
-// record a generic message and send it to Rollbar
 rollbar.log('Hello world!')
 
 const port = process.env.PORT || 4004 
